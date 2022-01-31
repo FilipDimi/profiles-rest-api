@@ -30,6 +30,7 @@ class UserProfileManager(BaseUserManager):
 
         return user
 
+
 class UserProfile(AbstractBaseUser, PermissionsMixin):
     """Database Model for users in the system"""
     email = models.EmailField(max_length=255, unique=True)
@@ -53,4 +54,3 @@ class UserProfile(AbstractBaseUser, PermissionsMixin):
     def __str__(self):
         """Return string representation of our user"""
         return self.email
-
